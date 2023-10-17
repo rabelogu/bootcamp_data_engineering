@@ -5,6 +5,7 @@ Bootcamp Data Engineering
 
 *1. Add into _tpch_sf1__sources.yml*
 
+```python
 - name: region
         description: Regions table holding repetitive data.
         columns:
@@ -13,11 +14,11 @@ Bootcamp Data Engineering
           tests:
             - not_null
             - unique
-
+```
 ![image](https://github.com/rabelogu/bootcamp_data_engineering/assets/45816059/5c341d37-5e79-42bf-b6df-6b815c790cca)
 
 *2. Create the SQL query*
-
+```SQL
    WITH
 source AS (
     SELECT
@@ -29,11 +30,11 @@ SELECT
     r_regionkey AS region_key,
     r_name AS region_name
 FROM source
-
+```
 ![image](https://github.com/rabelogu/bootcamp_data_engineering/assets/45816059/5cedae5c-c9ae-4e75-bf8c-2ca71a85a79d)
 
 *3. Alter the DIM_CUSTOMER query*
-
+```python
    {{ config(
     materialized = 'table',
 ) }}
@@ -70,7 +71,7 @@ LEFT JOIN nation
     ON (customer.nation_key = nation.nation_key)
 LEFT JOIN region
     ON (nation.region_key = region.region_key)
-
+```
 ![image](https://github.com/rabelogu/bootcamp_data_engineering/assets/45816059/36b6e28c-fa10-4e87-bd72-ec1b20df518a)
 
 #Using PowerBI with Snowflake to data visualization
