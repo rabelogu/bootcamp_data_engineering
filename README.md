@@ -3,7 +3,7 @@ Bootcamp Data Engineering
 
 #Adding Regions into the query
 
-1. Add into _tpch_sf1__sources.yml
+*1. Add into _tpch_sf1__sources.yml*
 
 - name: region
         description: Regions table holding repetitive data.
@@ -16,7 +16,7 @@ Bootcamp Data Engineering
 
 ![image](https://github.com/rabelogu/bootcamp_data_engineering/assets/45816059/5c341d37-5e79-42bf-b6df-6b815c790cca)
 
-2. Create the SQL query
+*2. Create the SQL query*
 
    WITH
 source AS (
@@ -32,7 +32,7 @@ FROM source
 
 ![image](https://github.com/rabelogu/bootcamp_data_engineering/assets/45816059/5cedae5c-c9ae-4e75-bf8c-2ca71a85a79d)
 
-3. Alter the DIM_CUSTOMER query
+*3. Alter the DIM_CUSTOMER query*
 
    {{ config(
     materialized = 'table',
@@ -75,7 +75,7 @@ LEFT JOIN region
 
 #Using PowerBI with Snowflake to data visualization
 
-1. Add connection
+*1. Add connection*
 
 ![PowerBI_SNOWFLAKE_CONNECTION-0](https://github.com/rabelogu/bootcamp_data_engineering/assets/45816059/581a1f8f-8c58-4db2-8e64-60c529eb6203)
 
@@ -85,7 +85,7 @@ LEFT JOIN region
 
 ![PowerBI_SNOWFLAKE_CONNECTION-2](https://github.com/rabelogu/bootcamp_data_engineering/assets/45816059/ca9665c9-cb63-4833-be2f-27ef8fd1d6f9)
 
-2. Transform data and modelate
+*2. Transform data and modelate*
 
 ![PowerBI_SNOWFLAKE](https://github.com/rabelogu/bootcamp_data_engineering/assets/45816059/6bae9c30-2420-4043-be8e-cbf47f63f49d)
 
